@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!---bootstrap cdn-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-----------------font awesome ----------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!------------my styles --------------->
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md shadow navbar-light">
+        <div class="container">
+            <!---------------logo------------------------>
+            <div class="navbar-brand">
+                <a href="#"><img src="static/images/logo.png" id="logo" alt="linkedin" srcset=""></a>
+            </div>
+            <!------------------- vertical line------------------------>
+            <div class="vl"></div>
+
+            <!------------------- dropdown discovery------------------------>
+            <div class="dropdown" id="discovery-dropdown">
+                <div class="text-dark dropdown-toggle" data-toggle="dropdown" id="dropdown-menu">Discover</div>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">people</a>
+                    <a href="#" class="dropdown-item">jobs</a>
+                </div>
+            </div>
+
+
+
+            <div id="nav-search-div" class="input-group col-lg-5 col-xs-5 ">
+                <span>
+                    <i class="fa fa-search text-dark " id="nav-search-icon" aria-hidden="true"></i>
+                </span>
+                <input class="form-control my-0 py-1" style="outline: none;" id="search-input" type="text" placeholder="Search" aria-label="Search">
+            </div>
+
+
+            
+            <!------------------- toggle button bars------------------------>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!------------------- side collapsible------------------------>
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="navbar-nav navbar-right ml-auto">
+                    <li class="navbar-items">
+                        <a href="#" class="nav-link"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="#" class="nav-link"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="#" class="nav-link"><img src="static/images/profile.jpg" class="rounded-circle" alt="profile" id="nav-profile-img" srcset=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </nav>
+
+  
+</body>
+</html>
