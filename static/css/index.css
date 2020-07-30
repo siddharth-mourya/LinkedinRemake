@@ -35,13 +35,47 @@ h6{
     }
 
     
+/*------------------------  scroll bar design---------------------------------*/
+/*width*/
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #dfdbdb; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #999696; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(117, 116, 116); 
+  }
+  
 
 
 
 /*============================================================================
-                            navbar
+  #navbar
   =============================================================================*/
 
+#navigation-bar
+{
+    animation: nav-down 0.6s ;
+}
+@keyframes nav-down
+{
+    0% {
+        transform: translatey(-100%);
+      }
+      100% {
+        transform: translatey(0);
+      }
+}
 
 /*  ------------------------------------------------ navbar left side------------------------  */
 .navbar {
@@ -111,16 +145,64 @@ nav .input-group{
 
 
 
-
-
+/*============================================================================
+  # below nav toggle bar 
+  ============================================================================ */
+  .below-nav-toggle
+  {
+      animation: nav-down 1.3s ;
+  }
+ 
+.below-nav-toggle
+{
+    box-shadow: 0 3px 6px -5px rgb(0, 0, 0);
+    padding-top: 15px;
+}
+.below-nav-toggle ul li a
+{
+    padding-bottom: 15px;
+}
+.below-nav-toggle ul li a
+{
+    color: #777474;
+    font-size: medium;
+    margin: 0 5px;
+    
+}
+.below-nav-toggle .active
+{
+    animation: mymove 1.5s;
+    border-bottom: 3px solid #459ec1;
+    color: #000;
+}
+@keyframes mymove {
+    0% {border-bottom: 3px solid #f7f8f9;}
+  100% {border-bottom: 3px solid #459ec1;}
+}
 
 
 
 /*============================================================================
-                            main conetent section
+  #  main content section
   ============================================================================ */
 
 /*--------------------- left profile card css   -------------------------- */
+
+.profile-stats-section
+{
+    animation: slide-out 1s ;
+}
+@keyframes slide-out
+{
+    0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+}
+
+
 h1 ,h2 ,h3 ,h4 ,h5 ,h6{
     font-family: "Proxima Nova SemiBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -176,7 +258,7 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6{
     /*---------------------------------------post section -----------------------------*/
     .post-section
     {   
-       
+      
     }
    
 
@@ -188,9 +270,18 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6{
         height: 40px;
         border-radius: 50%;
     }
-    .right-connection-sections .card
+    .right-connection-sections
     {
-
+        animation: slide-left 1s;
+    }
+    @keyframes slide-left
+    {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
     .right-connection-sections h6
     {

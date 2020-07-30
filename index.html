@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md shadow navbar-light">
+    <nav id="navigation-bar" class="navbar navbar-expand-md shadow navbar-light">
         <div class="container">
             <!---------------logo------------------------>
             <div class="navbar-brand">
@@ -68,6 +68,25 @@
         </div>
        
     </nav>
+
+    <div class="container-fluid">
+        <div class="row below-nav-toggle">
+            <ul class="nav mx-auto">
+                <li class="nav-item" >
+                  <a class="nav-link active" data-toggle="tab" id="post-nav" onclick="navClicked(this.id)" href="#post">Post</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " data-toggle="tab" id="article-nav" onclick="navClicked(this.id)" href="#article">Article</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" id="contact-nav" onclick="navClicked(this.id)" href="#contact">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" id="improve-nav" onclick="navClicked(this.id)" href="#improve">Improve</a>
+                  </li>
+              </ul>
+        </div>
+    </div>
   
     <div class="container main-content">
         <div class="row">
@@ -98,11 +117,25 @@
             </div>
 
             
-            <div class="col-md-8 col-lg-6 post-section bg-white">
-              <h2>post section</h2>
+            <div id="post-section" class="col-md-8 col-lg-6 post-section bg-white ">
+                <div class="tab-content">
+                    <div id="post" class="tab-pane active">
+                        <p>post</p>
+                    </div>
+                    <div id="article" class="tab-pane ">
+                        <p>article</p>
+                    </div>
+                    <div id="contact" class="tab-pane ">
+                        <p>contact</p>
+                    </div>
+                    <div id="improve" class="tab-pane ">
+                        <p>improve</p>
+                    </div>
+                </div>
             </div>
 
-            <div class=" col-lg-3 right-connection-sections">
+
+            <div id="right-connection-sections" class=" col-lg-3 right-connection-sections">
                 <div class="card" >
                     <div class="card-body">
                         <h6 class="font-weight-bold pt-3 ">Keep in touch </h6>
@@ -140,6 +173,26 @@
             </div>
         </div>
     </div>
+
+    <!-------------------------- script for removing connection right side on contact click ------------------------>
+    <script>
+        function navClicked(id)
+        {
+            console.log(id);
+            if(id == "contact-nav")
+            {
+                document.getElementById("right-connection-sections").style.display="none";
+                document.getElementById("post-section").classList.remove("col-lg-6")
+                document.getElementById("post-section").classList.add("col-lg-8")
+            }
+            else
+            {
+                document.getElementById("right-connection-sections").style.display="block";
+                document.getElementById("post-section").classList.remove("col-lg-8")
+                document.getElementById("post-section").classList.add("col-lg-6")
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
