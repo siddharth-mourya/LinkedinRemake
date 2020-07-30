@@ -8,10 +8,7 @@
 
     <!---bootstrap cdn-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    
     <!-----------------font awesome ----------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -19,6 +16,7 @@
     <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
+
     <nav class="navbar navbar-expand-md shadow navbar-light">
         <div class="container">
             <!---------------logo------------------------>
@@ -39,11 +37,11 @@
 
 
 
-            <div id="nav-search-div" class="input-group col-lg-5 col-xs-5 ">
+            <div id="nav-search-div" class="input-group col-lg-5 ">
                 <span>
                     <i class="fa fa-search text-dark " id="nav-search-icon" aria-hidden="true"></i>
                 </span>
-                <input class="form-control my-0 py-1" style="outline: none;" id="search-input" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control my-0 py-1" style="outline: none;" id="search-input" type="text" placeholder="Search Linkedin" aria-label="Search">
             </div>
 
 
@@ -54,8 +52,8 @@
             </button>
 
             <!------------------- side collapsible------------------------>
-            <div class="collapse navbar-collapse" id="mynav">
-                <ul class="navbar-nav navbar-right ml-auto">
+            <div class="collapse navbar-collapse justify-content-end" id="mynav">
+                <ul class="navbar-nav ">
                     <li class="navbar-items">
                         <a href="#" class="nav-link"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
                     </li>
@@ -70,7 +68,82 @@
         </div>
        
     </nav>
-
   
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-md-4 col-lg-3 profile-stats-section">
+                <div class="card" >
+                    <div class="card-body" id="card-body">
+                        <img src="static/images/profile.jpg" class="rounded-circle" id="card-profile-pic" alt="">
+                        <h6 class="font-weight-bold pt-3 ">Munshi Premchand</h6>
+                        <p class="text-muted" id="profile-location">Godan India</p>
+                    </div>
+                    <div class="row p-2" id="profile-stats">
+                        <div class="col-md-6 pt-3">
+                            <h6>358</h6>
+                            <p class="text-muted">Connections</p>
+                        </div>
+                        <div class="col-md-6 pt-3">
+                            <h6>25</h6>
+                            <p class="text-muted">Views</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6 class="text-primary pt-2 pb-2" id="profile-view">View my profile</h6>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-8 col-lg-6 post-section bg-white">
+              <h2>post section</h2>
+            </div>
+
+            <div class=" col-lg-3 right-connection-sections">
+                <div class="card" >
+                    <div class="card-body">
+                        <h6 class="font-weight-bold pt-3 ">Keep in touch </h6>
+                        <hr class="w-73 text-muted mt-4">
+                        <div class="row connection-profile mb-1">
+                            <div class="col-lg-4">
+                                <img src="static/images/profile.jpg" class="post-profile-pic" alt="">
+                            </div>
+                            <div class="col-lg-8 ml--9">
+                                <h6>Scarlet johnson</h6>
+                                <p>Software Engineer</p>
+                            </div>
+                        </div>
+                        <div class="row connection-profile  mb-1">
+                            <div class="col-lg-4">
+                                <img src="static/images/profile2.jpg" class="post-profile-pic" alt="">
+                            </div>
+                            <div class="col-lg-8 ml--9">
+                                <h6>Siddharth Mourya</h6>
+                                <p>Engineer in IBM</p>
+                            </div>
+                        </div>
+                        <div class="row connection-profile  mb-1">
+                            <div class="col-lg-4">
+                                <img src="static/images/profile3.jpg" class="post-profile-pic" alt="">
+                            </div>
+                            <div class="col-lg-8 ml--9">
+                                <h6>Barry Allen</h6>
+                                <p>Software Engineer in Star Labs</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>
