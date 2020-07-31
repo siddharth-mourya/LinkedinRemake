@@ -55,13 +55,22 @@
             <div class="collapse navbar-collapse justify-content-end" id="mynav">
                 <ul class="navbar-nav ">
                     <li class="navbar-items">
-                        <a href="#" class="nav-link"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+                        <a href="#" class="nav-link d-flex justify-content-start">
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <span class="show-on-small-sceen ml-4"> Messages</span>
+                        </a>
                     </li>
                     <li class="navbar-items">
-                        <a href="#" class="nav-link"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+                        <a href="#" class="nav-link d-flex justify-content-start">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            <span class="show-on-small-sceen ml-4"> BookMarks</span>
+                        </a>
                     </li>
                     <li class="navbar-items">
-                        <a href="#" class="nav-link"><img src="static/images/profile.jpg" class="rounded-circle" alt="profile" id="nav-profile-img" srcset=""></a>
+                        <a href="#" class="nav-link d-flex justify-content-start">
+                            <img src="static/images/profile.jpg" class="rounded-circle" alt="profile" id="nav-profile-img" srcset="">
+                            <span class="show-on-small-sceen ml-4"> Your Profile</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +78,7 @@
        
     </nav>
 
-    <div class="container-fluid">
+    <div id="below-nav-container" class="container-fluid">
         <div class="row below-nav-toggle">
             <ul class="nav mx-auto">
                 <li class="nav-item" >
@@ -87,7 +96,7 @@
               </ul>
         </div>
     </div>
-  
+    
     <div class="container main-content">
         <div class="row">
             <div class="col-md-4 col-lg-3 profile-stats-section">
@@ -560,6 +569,10 @@
         </div>
     </div>
 
+    <!---------------- ADD POST button -------------------->
+    <div class="add-post-float-button btn btn-primary rounded-circle">
+        <a href="#addpost"><i class="fa fa-plus text-light" style="font-size:40px"></i></a>
+    </div>
     <script>
         function interactButtonsClicked(id)
         {
