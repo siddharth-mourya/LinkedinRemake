@@ -152,10 +152,7 @@ nav .input-group{
   }
 
 /*--------------------- profile image on right  -------------------------- */
-.show-on-small-screen
-{
-    display: none;
-}
+
 #nav-profile-img
 {
     width: 35px;
@@ -531,10 +528,6 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6{
     .profile-stats-section
     {
         display: none;
-    }
-    .show-on-small-screen
-    {
-        display: block;
     }
   
 }
