@@ -489,12 +489,16 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6{
     }
     .post-section
     {
-        margin: 0 15px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
     .profile-stats-section
     {
         display: none;
     }
+
 }
 @media(max-width:576px)
 {
