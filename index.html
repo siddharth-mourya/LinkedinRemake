@@ -28,7 +28,7 @@
 
             <!------------------- dropdown discovery------------------------>
             <div class="dropdown" id="discovery-dropdown">
-                <div class="text-dark dropdown-toggle" data-toggle="dropdown" id="dropdown-menu">Discover</div>
+                <a class="dropdown-toggle" data-toggle="dropdown" id="dropdown-menu">Discover</a>
                 <div class="dropdown-menu">
                     <a href="#" class="dropdown-item">people</a>
                     <a href="#" class="dropdown-item">jobs</a>
@@ -73,16 +73,16 @@
         <div class="row below-nav-toggle">
             <ul class="nav mx-auto">
                 <li class="nav-item" >
-                  <a class="nav-link active" data-toggle="tab" id="post-nav" onclick="navClicked(this.id)" href="#post">Post</a>
+                  <a class="nav-link active" data-toggle="tab" id="post-nav"  href="#post">Post</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " data-toggle="tab" id="article-nav" onclick="navClicked(this.id)" href="#article">Article</a>
+                  <a class="nav-link " data-toggle="tab" id="article-nav"  href="#article">Article</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" id="contact-nav" onclick="navClicked(this.id)" href="#contact">Contacts</a>
+                  <a class="nav-link" data-toggle="tab" id="contact-nav" href="#contact">Contacts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" id="improve-nav" onclick="navClicked(this.id)" href="#improve">Improve</a>
+                    <a class="nav-link" data-toggle="tab" id="improve-nav"  href="#improve">Improve</a>
                   </li>
               </ul>
         </div>
@@ -94,7 +94,7 @@
                 <div class="card" >
                     <div class="card-body" id="card-body">
                         <img src="static/images/profile.jpg" class="rounded-circle" id="card-profile-pic" alt="">
-                        <h6 class="font-weight-bold pt-3 ">Munshi Premchand</h6>
+                        <h6 class="font-weight-bold pt-3 "><a href="#"> Munshi Premchand</a></h6>
                         <p class="text-muted" id="profile-location">Godan India</p>
                     </div>
                     <div class="row p-2" id="profile-stats">
@@ -109,7 +109,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <h6 class="text-primary pt-2 pb-2" id="profile-view">View my profile</h6>
+                            <h6 class="text-primary pt-2 pb-2" id="profile-view"><a href="#">View my profile</a></h6>
                         </div>
                         
                     </div>
@@ -117,11 +117,397 @@
             </div>
 
             
-            <div id="post-section" class="col-md-8 col-lg-6 post-section bg-white ">
+            <div id="post-section" class="col-md-8 col-lg-6 post-section  ">
                 <div class="tab-content">
+                    <!------------ post section ------------>
                     <div id="post" class="tab-pane active">
-                        <p>post</p>
+                        <!---------------new post container ---------------->
+                        <div class=" container new-post-container">
+                            <div class="row new-post ">
+                                <ul class="nav mx-auto">
+                                    <li class="nav-item " >
+                                        <a class="nav-link active" data-toggle="tab" id="new-update-nav"  href="#new-update">
+                                            <i class="fa fa-pencil text-primary mr-2" aria-hidden="true"></i>Share an update</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" id="new-photo-nav" href="#new-photo">
+                                            <i class="fa fa-picture-o text-warning mr-2" aria-hidden="true"></i>Upload a photo</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" data-toggle="tab" id="new-article-nav"  href="#new-article">
+                                            <i class='fa fa-book text-success mr-2'></i>Write an article</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div id="post-write-area" class="tab-content row pt-4 pb-1 pl-3">
+                                <div id="new-update" class="tab-pane col-md-12 active">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="1" id="post-textarea" placeholder="write something....." ></textarea>
+                                    </div>
+                                    <div class="submit-div mb-2">
+                                        <hr class="w-100 text-muted">
+                                        <a href="#submit" class="btn btn-primary p-1">Share Post</a>
+                                    </div>
+                                </div>
+                                <div id="new-photo" class="tab-pane col-md-12">
+                                    <div class="form-group">                                
+                                        <input type="file" id="input-file-now" class="file-upload" />
+                                    </div>
+                                    <div class="submit-div mb-2">
+                                        <hr class="w-100 text-muted">
+                                        <a href="#submit" class="btn btn-primary p-1">Post Picture</a>
+                                    </div>
+                                </div>
+                                <div id="new-article" class="tab-pane col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="post-textarea" placeholder="write something....." ></textarea>
+                                    </div>
+                                    <div class="submit-div mb-2">
+                                        <hr class="w-100 text-muted">
+                                        <a href="#submit" class="btn btn-primary p-1">Post Article</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                        <!---------------other's post ----------------------->
+                        <div id="post1" class="card  others-post">
+                            <div class="card-header bg-white mb-0 pb-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mr-2">
+                                            <img src="static/images/professor.jpg" class="post-profile-pic" alt="">
+                                        </div>
+                                        <div class="ml-2 mt-1"> 
+                                            <h6>El Profesor Sergio</h6>
+                                            <p>President at Royal Mint of Spain</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p>3 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-4 mt-1">
+                                <p>A criminal mastermind who goes by "The Professor" has a plan to pull off the
+                                     biggest heist in recorded history -- to print billions of euros in the Royal 
+                                     Mint of Spain. To help him carry out the ambitious plan, he recruits eight 
+                                     people with certain abilities and who have nothing to lose.
+                                </p>                                
+                                <img class="post-image"  src="static/images/postimg1.jpg" alt="">
+                                <br><br>
+                                <div class="interact-buttons" >
+                                    <a href="javascript:void(0)" onclick="interactButtonsClicked(this.id)" id="post1-like" ><i class="fa fa-heart-o "></i> 2  </a>
+                                    <a href="javascript:void(0)" id="post1-comment" ><i class="fa fa-comment-o ml-3"></i> 2</a>
+                                    <a href="javascript:void(0)" id="post1-share" ><i class="fa ml-3 fa-share-alt"></i></a>
+                                </div>
+                                <hr style="width: 108.5%;margin-left: -4%;margin-top: 5px;">
+                                <div class="comment-section" >
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile2.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Iris patel</h6>
+                                                <p id="comment">You have nice content keep posting :)</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>10 min</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile5.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Iris patel</h6>
+                                                <p id="comment">I have something to say even i don't know anything.</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>10 min</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="add-comment">
+                                    <a id="post1-comment-a" href="javascript:void(0)" onclick="openComment(this.id)">Add a comment.....</a>
+                                    <div id="post1-comment-area" class="comment-here">
+                                        <div class="form-group">
+                                            <textarea class="form-control"  class="comment-textarea" placeholder="write something....." ></textarea>
+                                        </div>
+                                        <div class="comment-submit-div">
+                                            <a href="#submit" class="btn btn-primary btn-pill p-1">Post Comment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div id="post2" class="card  others-post">
+                            <div class="card-header bg-white mb-0 pb-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mr-2">
+                                            <img src="static/images/profile9.jpg" class="post-profile-pic" alt="">
+                                        </div>
+                                        <div class="ml-2 mt-1"> 
+                                            <h6>Sandy C verma</h6>
+                                            <p>Software Architect at O&P</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p>6 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-4 mt-1">
+                                <p>Launching iview for campus recruitment! Convert subjective resumes into skill-based decision points and
+                                     take rapid decisions at scale. With our customized pricing for the entire season and unlimited number
+                                      of campuses, you spend much lesser than what you would have for visiting even one campus!
+
+                                </p>                                
+                               <p>
+                                Check out the platform to learn more. Link is in the first comment.</p>
+                                <div class="interact-buttons" >
+                                    <a href="javascript:void(0)" onclick="interactButtonsClicked(this.id)" id="post2-like" ><i class="fa fa-heart-o "></i> 2  </a>
+                                    <a href="javascript:void(0)" id="post2-comment" ><i class="fa fa-comment-o ml-3"></i> 2</a>
+                                    <a href="javascript:void(0)" id="post2-share" ><i class="fa ml-3 fa-share-alt"></i></a>
+                                </div>
+                                <hr style="width: 108.5%;margin-left: -4%;margin-top: 5px;">
+                                <div class="comment-section" >
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile4.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Iris patel</h6>
+                                                <p id="comment">What are you dooin today....</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>10 min</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile2.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Garry Sandhu</h6>
+                                                <p id="comment">Is this some companys placement call, should i attend.</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>10 min</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="add-comment">
+                                    <a id="post2-comment-a" href="javascript:void(0)" onclick="openComment(this.id)">Add a comment.....</a>
+                                    <div id="post2-comment-area" class="comment-here">
+                                        <div class="form-group">
+                                            <textarea class="form-control"  class="comment-textarea" placeholder="write something....." ></textarea>
+                                        </div>
+                                        <div class="comment-submit-div">
+                                            <a href="#submit" class="btn btn-primary btn-pill p-1">Post Comment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        
+                        <div id="post3" class="card  others-post">
+                            <div class="card-header bg-white mb-0 pb-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mr-2">
+                                            <img src="static/images/profile9.jpg" class="post-profile-pic" alt="">
+                                        </div>
+                                        <div class="ml-2 mt-1"> 
+                                            <h6>Sandy C verma</h6>
+                                            <p>Software Architect at O&P</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p>6 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-4 mt-1">
+                                <p>A particle accelerator is a machine that uses electromagnetic fields to propel charged particles to very
+                                     high speeds and energies, and to contain them in well-defined beams.[1]
+                                    <br>
+                                    Large accelerators are used for basic research in particle physics. The largest accelerator 
+                                    currently operating is the Large Hadron Collider (LHC) near Geneva, Switzerland, operated by the CERN.
+                                     It is a collider accelerator, which can accelerate two beams of protons to an energy of 6.5 TeV and 
+                                     cause them to collide head-on, creating center-of-mass energies of 13 TeV. Other powerful accelerators
+                                      are SuperKEKB at KEK in Japan, RHIC at Brookhaven National Laboratory in New York and, formerly, the 
+                                      Tevatron at Fermilab, Batavia, Illinois.
+                                </p>                                
+                            
+                                <div class="interact-buttons" >
+                                    <a href="javascript:void(0)" onclick="interactButtonsClicked(this.id)" id="post3-like" ><i class="fa fa-heart-o "></i> 2  </a>
+                                    <a href="javascript:void(0)" id="post3-comment" ><i class="fa fa-comment-o ml-3"></i> 2</a>
+                                    <a href="javascript:void(0)" id="post3-share" ><i class="fa ml-3 fa-share-alt"></i></a>
+                                </div>
+                                <hr style="width: 108.5%;margin-left: -4%;margin-top: 5px;">
+                                <div class="comment-section" >
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile4.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Sanath Shetty</h6>
+                                                <p id="comment">Where to get these accelerator, any links ?</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>37 min</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile2.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Garry Sandhu</h6>
+                                                <p id="comment">Is this some companys placement call, should i attend.</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>5 min</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="add-comment">
+                                    <a id="post3-comment-a" href="javascript:void(0)" onclick="openComment(this.id)">Add a comment.....</a>
+                                    <div id="post3-comment-area" class="comment-here">
+                                        <div class="form-group">
+                                            <textarea class="form-control"  class="comment-textarea" placeholder="write something....." ></textarea>
+                                        </div>
+                                        <div class="comment-submit-div">
+                                            <a href="#submit" class="btn btn-primary btn-pill p-1">Post Comment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div id="post4" class="card  others-post">
+                            <div class="card-header bg-white mb-0 pb-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mr-2">
+                                            <img src="static/images/profile5.jpg" class="post-profile-pic" alt="">
+                                        </div>
+                                        <div class="ml-2 mt-1"> 
+                                            <h6>Sanam Shastri</h6>
+                                            <p>Coding Coach at somewhere</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p>3 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-4 mt-1">
+                                <p>A particle accelerator is a machine that uses electromagnetic fields to propel charged particles to very
+                                    high speeds and energies, and to contain them in well-defined beams.[1]
+                                   <br>
+                                   Large accelerators are used for basic research in particle physics. The largest accelerator 
+                                   currently operating is the Large Hadron Collider (LHC) near Geneva, Switzerland, operated by the CERN.
+                                    It is a collider accelerator, which can accelerate two beams of protons to an energy of 6.5 TeV and 
+                                    cause them to collide head-on, creating center-of-mass energies of 13 TeV. Other powerful accelerators
+                                     are SuperKEKB at KEK in Japan, RHIC at Brookhaven National Laboratory in New York and, formerly, the 
+                                     Tevatron at Fermilab, Batavia, Illinois.
+                                </p>                                
+                                <img class="post-image"  src="static/images/particle.jpg" alt="">
+                                <br><br>
+                                <div class="interact-buttons" >
+                                    <a href="javascript:void(0)" onclick="interactButtonsClicked(this.id)" id="post4-like" ><i class="fa fa-heart-o "></i> 2  </a>
+                                    <a href="javascript:void(0)" id="post4-comment" ><i class="fa fa-comment-o ml-3"></i> 2</a>
+                                    <a href="javascript:void(0)" id="post4-share" ><i class="fa ml-3 fa-share-alt"></i></a>
+                                </div>
+                                <hr style="width: 108.5%;margin-left: -4%;margin-top: 5px;">
+                                <div class="comment-section" >
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile2.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Jake austin</h6>
+                                                <p id="comment">There is a error in your code, fix it.</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>5 min</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start connection-profile">
+                                            <div class="ml-2 mr-2">
+                                                <img src="static/images/profile5.jpg" class="post-profile-pic" alt="">
+                                            </div>
+                                            <div class="">
+                                                <h6>Rohit Verma</h6>
+                                                <p id="comment">what is the code that you are using</p>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="">
+                                            <p>20 min</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="add-comment">
+                                    <a id="post4-comment-a" href="javascript:void(0)" onclick="openComment(this.id)">Add a comment.....</a>
+                                    <div id="post4-comment-area" class="comment-here">
+                                        <div class="form-group">
+                                            <textarea class="form-control"  class="comment-textarea" placeholder="write something....." ></textarea>
+                                        </div>
+                                        <div class="comment-submit-div">
+                                            <a href="#submit" class="btn btn-primary btn-pill p-1">Post Comment</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+
                     </div>
+
+                    <!----------------post section ends ------------------>
                     <div id="article" class="tab-pane ">
                         <p>article</p>
                     </div>
@@ -140,41 +526,66 @@
                     <div class="card-body">
                         <h6 class="font-weight-bold pt-3 ">Keep in touch </h6>
                         <hr class="w-73 text-muted mt-4">
-                        <div class="row connection-profile mb-1">
-                            <div class="col-lg-4">
-                                <img src="static/images/profile.jpg" class="post-profile-pic" alt="">
+                        <div class="row d-flex justify-content-start connection-profile mb-1">
+                            <div class="ml-2 mr-2">
+                                <img src="static/images/barry.jpg" class="post-profile-pic" alt="">
                             </div>
-                            <div class="col-lg-8 ml--9">
-                                <h6>Scarlet johnson</h6>
-                                <p>Software Engineer</p>
-                            </div>
-                        </div>
-                        <div class="row connection-profile  mb-1">
-                            <div class="col-lg-4">
-                                <img src="static/images/profile2.jpg" class="post-profile-pic" alt="">
-                            </div>
-                            <div class="col-lg-8 ml--9">
-                                <h6>Siddharth Mourya</h6>
-                                <p>Engineer in IBM</p>
-                            </div>
-                        </div>
-                        <div class="row connection-profile  mb-1">
-                            <div class="col-lg-4">
-                                <img src="static/images/profile3.jpg" class="post-profile-pic" alt="">
-                            </div>
-                            <div class="col-lg-8 ml--9">
+                            <div class="">
                                 <h6>Barry Allen</h6>
-                                <p>Software Engineer in Star Labs</p>
+                                <p>Speedster at StarLabs</p>
                             </div>
                         </div>
-                        
+                        <div class="row d-flex justify-content-start connection-profile mb-1">
+                            <div class="ml-2 mr-2">
+                                <img src="static/images/nairobi.jpg" class="post-profile-pic" alt="">
+                            </div>
+                            <div class="">
+                                <h6>Nairobi chaudhary</h6>
+                                <p>Supervisor in team</p>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-start connection-profile mb-1">
+                            <div class="ml-2 mr-2">
+                                <img src="static/images/profile4.jpg" class="post-profile-pic" alt="">
+                            </div>
+                            <div class="">
+                                <h6>Raquel Murillo</h6>
+                                <p>Colonel in Spain Police</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
-    
+    <script>
+        function interactButtonsClicked(id)
+        {
+            console.log(id);
+            console.log(document.getElementById(id).style.color);
+            if(id == "post1-like" && document.getElementById(id).style.color == "rgb(133, 128, 128)" )
+            {
+                console.log(document.getElementById(id).style.color);
+                document.getElementById(id).style.color = "blue";
+                document.getElementById(id).innerHTML = "<i class=\"fa fa-heart-o \"></i> 3"
+            }
+            else
+            {
+                document.getElementById(id).style.color = "rgb(133, 128, 128)";
+                document.getElementById(id).innerHTML = "<i class=\"fa fa-heart-o \"></i> 2"
+            }
+        }
+
+        function openComment(id)
+        {
+            console.log(id);
+            area_id = id + "rea";
+            document.getElementById(id).style.display="none";
+            document.getElementById(area_id).style.display="block";
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
