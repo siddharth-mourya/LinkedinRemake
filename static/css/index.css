@@ -84,6 +84,7 @@ h6{
 
 #navigation-bar
 {
+    z-index: 10;
     animation: nav-down 1.5s ;
 }
 #navigation-bar a:hover
@@ -137,11 +138,11 @@ h6{
     margin-top:8px;
 }
 
- input[type="text"]:focus,
- button:focus {
-     border: none !important;
-      outline: none !important;
-  }
+ input[type="text"]:focus
+ {
+    border: none !important;
+    outline: none !important;
+ }
     
 nav .input-group{
     border: 2px #eeeded solid;
@@ -151,7 +152,10 @@ nav .input-group{
   }
 
 /*--------------------- profile image on right  -------------------------- */
-
+.show-on-small-sceen
+{
+    display: none;
+}
 #nav-profile-img
 {
     width: 35px;
@@ -164,8 +168,33 @@ nav .input-group{
 /*============================================================================
   # below nav toggle bar 
   ============================================================================ */
-
- 
+#below-nav-container
+{
+    position: relative;
+    animation: up-down 3s infinite alternate-reverse;
+}
+/*@keyframes up-down
+{
+    0% { transform: translateY(-50px); }
+    100% { transform: translateY(0px); }
+}
+ #below-nav-container:hover
+{
+    animation: nav-container-down 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes nav-container-down
+{
+    0%
+    {
+        top:-50px;
+    }
+    100%{
+        top:0px;
+    }
+}
+*/
 .below-nav-toggle
 {
     box-shadow: 0 3px 6px -5px rgba(0, 0, 0,0.5);
@@ -196,8 +225,6 @@ nav .input-group{
     0% {border-bottom: 3px solid #f7f8f9;}
   100% {border-bottom: 3px solid #459ec1;}
 }
-
-
 
 /*============================================================================
   #  main content section
@@ -452,7 +479,14 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6{
         color: #858080;
     }
 
-
+    /*---------------------------------------add post floating button ----------------------------*/
+    .add-post-float-button
+    {
+        position: fixed;
+        display: none;
+        bottom: 25px;
+        right: 25px;
+    }
 /* ------------------------------------  media screen ------------------------------ */
 @media(max-width:1200px)
 {
@@ -498,10 +532,22 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6{
     {
         display: none;
     }
-
+    .show-on-small-sceen
+    {
+        display: block;
+    }
+  
 }
 @media(max-width:576px)
 {
+   .new-post-container
+    {
+        display: none;
+    }
+    .add-post-float-button
+    {
+        display: block;
+    }
     #nav-search-div
     {
         width: 70%; 
